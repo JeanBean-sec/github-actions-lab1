@@ -7,9 +7,20 @@ jobs:
         steps:
           - name: Say Hello
             run: echo "Hello from Github actions!"
+
           - name: Show Date
             run: date 
+
           - name: Show operating system
             run: uname -a
+
+          - name: Show python version
+            run: python --version
+
+          - name: Show git version
+            run: git --version
+
+          - name: show files
+            run: ls -la
 
 
