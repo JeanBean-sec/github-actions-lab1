@@ -1,0 +1,21 @@
+name: Python application
+on:
+  push:
+  pull_request:
+jobs:
+      run-python:
+        runs-on: ubuntu-latest
+        steps:
+          - name: checkout repository
+            run: actions/checkout@v4
+
+          - name: set up python
+            run: actions/setup-python@v5
+            with:
+              python-version: "3.12"
+
+          - name: run application
+            run: python app.py
+
+
+
